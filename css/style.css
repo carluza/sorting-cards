@@ -1,80 +1,136 @@
-/*
-\2660 spades => pica
-\2665 hearts => corazon
-\2666 diams => diamante
-\2663 clubs => trebol
-*/
-
 body {
-    margin: 0;
-    padding: 0;
-    border: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: green;
+  margin-left: 5px;
 }
 
 .card {
-    border: .8 solid #000;
-    width: 50px;
-    height: 80px;
-    border-radius: 10px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 1px 3px #000;
-    margin: 5px;
+  border: 0.8 solid #000;
+  width: 50px;
+  height: 80px;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 1px 3px #000;
+  margin: 5px;
 }
 
 .card .number {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    padding: 5px;
-    font-size: 20px;
-    box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  font-size: 20px;
+  box-sizing: border-box;
 }
 
-.card .number.spades::before {
-    content: '\2660';
-    text-align: left;
+.card.spades::before {
+  content: "\2660";
+  text-align: left;
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
 }
-.card .number.spades::after {
-    content: '\2660';
-    transform: rotate(180deg);
-    text-align: left;
-}
-
-.card .number.clubs::before {
-    content: '\2663';
-    text-align: left;
-}
-.card .number.clubs::after {
-    content: '\2663';
-    transform: rotate(180deg);
-    text-align: left;
+.card.spades::after {
+  content: "\2660";
+  transform: rotate(180deg);
+  text-align: left;
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
 }
 
-.card .number.hearts::before {
-    content: '\2665';
-    color: red;
-    text-align: left;
+.card.clubs::before {
+  content: "\2663";
+  text-align: left;
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
 }
-.card .number.hearts::after {
-    content: '\2665';
-    color: red;
-    transform: rotate(180deg);
-    text-align: left;
+.card.clubs::after {
+  content: "\2663";
+  transform: rotate(180deg);
+  text-align: left;
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
 }
 
-.card .number.diams::before {
-    content: '\2666';
-    color: red;
-    text-align: left;
+.card.hearts::before {
+  content: "\2665";
+  text-align: left;
+  width: 100%;
+  color: red;
+  padding: 5px;
+  box-sizing: border-box;
 }
-.card .number.diams::after {
-    content: '\2666';
-    color: red;
-    transform: rotate(180deg);
-    text-align: left;
+.card.hearts::after {
+  content: "\2665";
+  transform: rotate(180deg);
+  text-align: left;
+  width: 100%;
+  color: red;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.card.diams::before {
+  content: "\2666";
+  text-align: left;
+  width: 100%;
+  color: red;
+  padding: 5px;
+  box-sizing: border-box;
+}
+.card.diams::after {
+  content: "\2666";
+  transform: rotate(180deg);
+  text-align: left;
+  width: 100%;
+  color: red;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+#formulario {
+  padding: 5px;
+}
+
+#contenedor {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+#ordenadas {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#ordenadas .contenedor {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+input {
+  width: 5%;
+}
+
+button {
+  border: 1px solid rgb(21, 19, 19);
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px 1px;
+  color: rgb(49, 68, 47);
+  background-color: rgb(102, 182, 102);
 }
